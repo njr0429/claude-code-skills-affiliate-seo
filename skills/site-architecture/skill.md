@@ -76,19 +76,42 @@ TOPページ (/)
     └── 記事C-2 (/category-c/article-2/)
 ```
 
-#### URL設計ルール
+#### Blogger: URL最適化より重要なこと
 
-**Blogger:**
+**現実的なBlogger URL構造:**
 ```
-✅ 良い例:
-https://example.blogspot.com/2026/03/skincare-moisturizer-ranking.html
-https://example.blogspot.com/2026/03/product-name-review.html
+https://example.blogspot.com/2026/03/skincare-ranking.html
+https://example.blogspot.com/2026/03/product-review.html
 
-❌ 悪い例:
-https://example.blogspot.com/2026/03/blog-post.html （自動生成のまま）
+制約:
+- 日付部分は基本固定（/2026/03/）
+- 階層URLは不可（category/article/ のような形式は無理）
+- カスタムパーマリンクで .html 前の部分のみ変更可能
 ```
 
-**WordPress:**
+**Bloggerで代わりに重視すること:**
+
+1. **記事タイトル最適化**
+   - URLより記事タイトル（H1）にキーワード含める
+   - メタディスクリプションを丁寧に設定
+
+2. **ラベル設計の統一**
+   - 3-5個のメインラベルに絞る
+   - ラベル名はキーワード意識（例: 「基礎知識」「選び方」「おすすめ」）
+   - ラベルページ（/search/label/XXX）を活用
+
+3. **内部リンク設計**
+   - 記事内に関連記事リンクを手動で3-5箇所配置
+   - 収益記事への導線を明確に
+   - ラベルページへのリンクも活用
+
+4. **ナビゲーション設計**
+   - メニューバーにラベル別ページへのリンク
+   - サイドバーに「人気記事」「カテゴリ（ラベル）」
+   - 各記事にラベル表示（Blogger標準機能）
+
+#### WordPress: URL設計ルール
+
 ```
 ✅ 良い例:
 https://example.com/skincare/moisturizer-ranking/
@@ -98,6 +121,11 @@ https://example.com/review/product-name/
 https://example.com/p=123
 https://example.com/2026/03/17/article-title/
 ```
+
+**WordPressの優位性:**
+- 階層URL自由に設定可能
+- カテゴリー名をパーマリンクに反映
+- プラグインで細かい制御可能
 
 ### 2. カテゴリー/ラベル設計
 
@@ -135,6 +163,45 @@ https://example.com/2026/03/17/article-title/
 - 1記事に複数ラベル付与可能
 - `/search/label/ラベル名` でラベル別記事一覧表示
 - 階層構造は不可（フラットのみ）
+
+**Bloggerナビゲーション設計例:**
+```html
+<!-- ヘッダーメニュー -->
+<nav>
+  <a href="/">ホーム</a> |
+  <a href="/search/label/基礎知識">基礎知識</a> |
+  <a href="/search/label/選び方">選び方ガイド</a> |
+  <a href="/search/label/おすすめ">おすすめランキング</a> |
+  <a href="/search/label/レビュー">レビュー</a>
+</nav>
+
+<!-- サイドバー -->
+<div class="sidebar">
+  <h3>カテゴリー</h3>
+  <ul>
+    <li><a href="/search/label/基礎知識">基礎知識 (15)</a></li>
+    <li><a href="/search/label/選び方">選び方ガイド (10)</a></li>
+    <li><a href="/search/label/おすすめ">おすすめランキング (8)</a></li>
+    <li><a href="/search/label/レビュー">レビュー (7)</a></li>
+  </ul>
+
+  <h3>人気記事</h3>
+  <!-- Blogger標準ウィジェット使用 -->
+</div>
+```
+
+**Blogger内部リンク戦略（重要）:**
+```markdown
+URLが自由にならない分、内部リンクを手動で丁寧に配置:
+
+1. 集客記事 → 収益記事へのリンクを本文中に3箇所
+2. 記事下部に「あわせて読みたい」セクション（手動）
+3. ラベルページ（/search/label/XXX）活用
+4. TOPページに主要収益記事へのリンク配置
+
+例:
+「詳しくは[スキンケアおすすめランキング](記事URL)をご覧ください。」
+```
 
 #### WordPress: カテゴリー設計（3-5個）
 ```markdown
@@ -207,6 +274,22 @@ https://example.com/2026/03/17/article-title/
 
 ### 4. パンくずリスト設計
 
+#### Blogger版
+```html
+<!-- シンプルなパンくずリスト -->
+<nav class="breadcrumb">
+  <a href="/">ホーム</a> &gt;
+  <a href="/search/label/基礎知識">基礎知識</a> &gt;
+  <span>記事タイトル</span>
+</nav>
+```
+
+**Bloggerの制約:**
+- 階層URLがないため、パンくずは「ホーム > ラベル > 記事」の3階層が限界
+- 構造化データは手動で追加可能だが、必須ではない
+- Bloggerテーマによっては自動生成されることもある
+
+#### WordPress版
 ```html
 <!-- 構造化データ対応 -->
 <nav aria-label="breadcrumb">
@@ -229,6 +312,24 @@ https://example.com/2026/03/17/article-title/
 
 ### 5. XMLサイトマップ設計
 
+#### Blogger版
+**自動生成されるサイトマップ:**
+```
+https://example.blogspot.com/sitemap.xml （自動生成）
+https://example.blogspot.com/atom.xml?redirect=false （Atomフィード）
+```
+
+**特徴:**
+- Bloggerが自動でサイトマップ生成
+- Google Search Consoleに自動登録される
+- 手動編集は不可
+- カスタマイズ不要（自動で最適化）
+
+**やるべきこと:**
+- Google Search Console で sitemap.xml を確認するのみ
+- 特に追加作業なし
+
+#### WordPress版
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -262,25 +363,119 @@ https://example.com/2026/03/17/article-title/
 </urlset>
 ```
 
+**WordPressの利点:**
+- Yoast SEOなどプラグインで細かい制御可能
+- priority、changefreq を記事ごとに設定
+- 除外ページ設定可能
+
 ## 出力形式
 
+### Blogger版（デフォルト）
+
 ```markdown
-# サイト構造設計書
+# サイト構造設計書（Blogger）
 
 ## サイト名
 [サイト名] - [キャッチコピー]
+URL: https://[サイト名].blogspot.com
 
-## サイト階層図
+## サイト階層図（フラット構造）
 
 ```
-TOPページ
-├── カテゴリーA: [名前]
-│   ├── 記事A-1: [タイトル] (収益)
-│   ├── 記事A-2: [タイトル] (集客)
+TOPページ (/)
+├── 記事A-1: [タイトル] (収益) [ラベル: おすすめ]
+├── 記事A-2: [タイトル] (集客) [ラベル: 基礎知識]
+├── 記事B-1: [タイトル] (収益) [ラベル: レビュー]
+└── ...
+
+ラベルページ:
+├── /search/label/基礎知識 （集客記事10-15記事）
+├── /search/label/選び方 （集客記事8-12記事）
+├── /search/label/おすすめ （収益記事5-10記事）
+└── /search/label/レビュー （収益記事5-10記事）
+```
+
+## ラベル詳細
+
+### ラベル1: 基礎知識 (集客)
+- **ラベルページURL**: /search/label/基礎知識
+- **目的**: 初心者向け情報提供、PV獲得
+- **ターゲットKW**: 〇〇とは、〇〇始め方
+- **記事数**: 10-15記事
+- **収益/集客比**: 0:10（純粋な集客）
+
+#### 記事リスト
+| # | タイトル | パーマリンク | タイプ | 優先度 | ステータス |
+|---|---------|-------------|--------|--------|-----------|
+| 1 | [記事1] | /2026/03/keyword-based-url.html | 集客 | ★★★ | 未作成 |
+| 2 | [記事2] | /2026/03/another-url.html | 集客 | ★★☆ | 未作成 |
+
+### ラベル2: おすすめ (収益)
+- **ラベルページURL**: /search/label/おすすめ
+- **目的**: 収益化メイン
+- **ターゲットKW**: 〇〇おすすめ、〇〇ランキング
+- **記事数**: 5-10記事
+- **収益/集客比**: 5:0（純粋な収益）
+
+## 内部リンクマップ
+
+### 収益記事への導線
+
+```
+集客記事A（基礎知識） → 収益記事1（おすすめ） (本文3箇所 + 記事下2箇所)
+集客記事B（選び方） → 収益記事1（おすすめ） (本文2箇所 + 記事下1箇所)
+集客記事C（基礎知識） → 収益記事2（レビュー） (本文3箇所)
+```
+
+### ハブページ設定
+- TOPページ: 主要収益記事3-5個へのリンク配置
+- 各ラベルページ: 該当記事の自動一覧
+- 総合ランキング記事: 全収益記事にリンク
+
+## グローバルナビゲーション
+
+```html
+<nav>
+  <a href="/">ホーム</a> |
+  <a href="/search/label/基礎知識">基礎知識</a> |
+  <a href="/search/label/選び方">選び方ガイド</a> |
+  <a href="/search/label/おすすめ">おすすめランキング</a> |
+  <a href="/search/label/レビュー">レビュー</a>
+</nav>
+```
+
+## パーマリンク設定ルール
+
+**各記事で手動設定:**
+- 英語小文字
+- ハイフン区切り
+- キーワード含む
+- 例: `skincare-ranking`, `product-name-review`
+
+❌ 避けるべき: 自動生成（`blog-post.html`）
+✅ 推奨: キーワードベース（`skincare-ranking.html`）
+```
+
+### WordPress版
+
+```markdown
+# サイト構造設計書（WordPress）
+
+## サイト名
+[サイト名] - [キャッチコピー]
+URL: https://example.com
+
+## サイト階層図（階層構造）
+
+```
+TOPページ (/)
+├── カテゴリーA: [名前] (/category-a/)
+│   ├── 記事A-1: [タイトル] (収益) (/category-a/article-1/)
+│   ├── 記事A-2: [タイトル] (集客) (/category-a/article-2/)
 │   └── ...
-├── カテゴリーB: [名前]
+├── カテゴリーB: [名前] (/category-b/)
 │   └── ...
-└── カテゴリーC: [名前]
+└── カテゴリーC: [名前] (/category-c/)
     └── ...
 ```
 
@@ -296,8 +491,8 @@ TOPページ
 #### 記事リスト
 | # | タイトル | URL | タイプ | 優先度 | ステータス |
 |---|---------|-----|--------|--------|-----------|
-| 1 | [記事1] | /url-1/ | 収益 | ★★★ | 未作成 |
-| 2 | [記事2] | /url-2/ | 集客 | ★★☆ | 未作成 |
+| 1 | [記事1] | /category-a/url-1/ | 収益 | ★★★ | 未作成 |
+| 2 | [記事2] | /category-a/url-2/ | 集客 | ★★☆ | 未作成 |
 
 ## 内部リンクマップ
 
