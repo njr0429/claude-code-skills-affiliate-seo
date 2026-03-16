@@ -903,12 +903,13 @@ PV: 1,000
 ## 📚 参考資料
 
 各スキルの詳細は対応するmdファイルを参照:
-- `skills/01-planning/affiliate-planning.md`
-- `skills/01-planning/keyword-research.md`
-- `skills/02-design/site-architecture.md`
-- `skills/03-development/seo-article-generator.md`
-- `skills/04-optimization/seo-audit.md`
-- `skills/04-optimization/conversion-optimizer.md`
+- `skills/affiliate-planning/affiliate-planning.md`
+- `skills/keyword-research/keyword-research.md`
+- `skills/site-architecture/site-architecture.md`
+- `skills/content-calendar/content-calendar.md`
+- `skills/seo-article-generator/seo-article-generator.md`
+- `skills/seo-audit/seo-audit.md`
+- `skills/conversion-optimizer/conversion-optimizer.md`
 
 その他:
 - `BLOGGER-SETUP.md` - Blogger完全ガイド

@@ -8,68 +8,54 @@
 - 記事数: 30-50記事
 - 想定期間: 6-12ヶ月
 
-## 📋 推奨ワークフロー
+## 📋 利用可能なスキル (7個)
 
-### 1. 企画・戦略フェーズ (Week 1-2)
+### Phase 1: 企画・戦略 (Week 1-2)
 ```bash
 /affiliate-planning      # ジャンル選定、競合分析、収益戦略
 /keyword-research        # キーワード調査、検索ボリューム分析
-/monetization-strategy   # マネタイズ戦略立案
 ```
 
-### 2. 設計フェーズ (Week 2-3)
+### Phase 2: 設計 (Week 2-3)
 ```bash
 /site-architecture       # サイト構造設計、カテゴリー設計
 /content-calendar        # コンテンツカレンダー作成
-/conversion-design       # CV導線設計
 ```
 
-### 3. 開発・構築フェーズ (Week 3-8)
+### Phase 3: 開発・構築 (Week 3-8)
 ```bash
 /seo-article-generator   # SEO最適化記事の作成
-/landing-page-creator    # ランディングページ作成
-/internal-linking        # 内部リンク最適化
 ```
 
-### 4. 最適化フェーズ (Week 8-)
+### Phase 4: 最適化 (Week 8-)
 ```bash
 /seo-audit              # SEO監査・改善提案
-/performance-check      # ページ速度最適化
 /conversion-optimizer   # CVR改善施策
-/analytics-setup        # GA4/Search Console設定
 ```
 
 ## 📁 フォルダ構成
 
 ```
 claude-code-skills-templat-seo/
-├── README.md                          # このファイル
-├── skills/                            # Claude Code スキル定義
-│   ├── 01-planning/                   # 企画・戦略
-│   │   ├── affiliate-planning.md
-│   │   ├── keyword-research.md
-│   │   └── monetization-strategy.md
-│   ├── 02-design/                     # 設計
-│   │   ├── site-architecture.md
-│   │   ├── content-calendar.md
-│   │   └── conversion-design.md
-│   ├── 03-development/                # 開発・構築
-│   │   ├── seo-article-generator.md
-│   │   ├── landing-page-creator.md
-│   │   └── internal-linking.md
-│   └── 04-optimization/               # 最適化
-│       ├── seo-audit.md
-│       ├── performance-check.md
-│       ├── conversion-optimizer.md
-│       └── analytics-setup.md
+├── README.md                          # プロジェクト概要
+├── CLAUDE.md                          # 全スキル統合定義 (Claude Code用)
+├── BLOGGER-SETUP.md                   # Blogger完全セットアップガイド
+├── QUICKSTART.md                      # 30分クイックスタート
+│
+├── skills/                            # スキル定義 (機能単位)
+│   ├── affiliate-planning/            # ジャンル選定、競合分析
+│   ├── keyword-research/              # キーワードリサーチ
+│   ├── site-architecture/             # サイト構造設計
+│   ├── content-calendar/              # コンテンツカレンダー
+│   ├── seo-article-generator/         # SEO記事作成
+│   ├── seo-audit/                     # SEO監査
+│   └── conversion-optimizer/          # CVR最適化
+│
 ├── templates/                         # テンプレート
-│   ├── article-template.md            # 記事テンプレート
-│   ├── lp-template.md                 # LPテンプレート
-│   └── checklist.md                   # チェックリスト
+│   └── article-template.md            # 記事テンプレート
+│
 └── examples/                          # サンプル
-    ├── sample-site-structure.md
-    ├── sample-content-calendar.md
-    └── sample-keywords.md
+    └── sample-site-structure.md       # サイト構造サンプル
 ```
 
 ## 🚀 クイックスタート
@@ -103,9 +89,6 @@ claude-code-skills-templat-seo/
 
 # 2. コンバージョン最適化
 /conversion-optimizer
-
-# 3. パフォーマンス改善
-/performance-check
 ```
 
 ## 💡 収益化のポイント
