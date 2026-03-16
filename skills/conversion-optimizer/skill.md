@@ -11,6 +11,7 @@
 - `article_url`: 対象記事URL（収益記事）
 
 ### オプション
+- `platform`: プラットフォーム（`blogger` / `wordpress`、デフォルト: `blogger`）
 - `current_cvr`: 現在のCVR（%）
 - `monthly_pv`: 月間PV数
 - `analytics_data`: GA4データ（ヒートマップ、離脱率など）
@@ -77,12 +78,25 @@ Markdown形式のCVR最適化レポート
 
 #### ① CTAボタン最適化
 
+**❌ 弱いCTA（避けるべき）**
 ```html
-<!-- ❌ 弱いCTA -->
 <a href="...">こちら</a>
 <a href="...">詳細を見る</a>
+```
 
-<!-- ✅ 強いCTA -->
+**✅ 強いCTA（Blogger版：インラインCSS）**
+```html
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; text-align: center; margin: 30px 0;">
+  <p style="color: #fff; font-size: 16px; margin: 0 0 10px 0; font-weight: bold;">今だけ30%オフ!</p>
+  <a href="[アフィリエイトリンク]" target="_blank" rel="nofollow" style="display: inline-block; background: #ff6b6b; color: white; padding: 15px 40px; font-size: 18px; font-weight: bold; border-radius: 50px; text-decoration: none; margin: 10px 0;">
+    公式サイトで最安値をチェック
+  </a>
+  <p style="color: #fff; font-size: 14px; margin: 10px 0 0 0;">送料無料・30日間返品保証</p>
+</div>
+```
+
+**✅ 強いCTA（WordPress版：カスタムCSS）**
+```html
 <div class="cta-button primary">
   <p class="benefit">今だけ30%オフ!</p>
   <a href="..." class="btn">
@@ -194,6 +208,22 @@ Markdown形式のCVR最適化レポート
 
 #### ④ 緊急性・希少性の演出
 
+**Blogger版（静的表現）**
+```html
+<div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+  <p style="margin: 5px 0;">⏰ キャンペーン期間: 2026年3月31日まで</p>
+  <p style="margin: 5px 0;">🔥 在庫残りわずか!</p>
+  <p style="margin: 5px 0;">✨ 今なら期間限定30%オフ</p>
+</div>
+
+<!-- 限定感 -->
+<div style="background: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; margin: 20px 0;">
+  <p style="margin: 5px 0;">👥 過去30日間で327人が購入</p>
+  <p style="margin: 5px 0;">⭐ 満足度98%</p>
+</div>
+```
+
+**WordPress版（JavaScriptカウントダウン可）**
 ```html
 <!-- カウントダウンタイマー -->
 <div class="urgency-box">
@@ -201,12 +231,9 @@ Markdown形式のCVR最適化レポート
   <p>🔥 在庫残りわずか!</p>
   <p>✨ 今なら期間限定30%オフ</p>
 </div>
-
-<!-- 限定感 -->
-<div class="scarcity">
-  <p>👥 過去30日間で327人が購入</p>
-  <p>📦 在庫残り12個</p>
-</div>
+<script>
+  // JavaScriptカウントダウン実装
+</script>
 ```
 
 **注意**: 嘘の情報は厳禁。本当のキャンペーン情報のみ掲載

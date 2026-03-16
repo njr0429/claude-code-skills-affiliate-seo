@@ -12,6 +12,7 @@
 - `article_type`: 記事タイプ（`revenue` = 収益記事 / `traffic` = 集客記事）
 
 ### オプション
+- `platform`: プラットフォーム（`blogger` / `wordpress`、デフォルト: `blogger`）
 - `target_word_count`: 想定文字数（デフォルト: 競合平均+10-15%）
 - `affiliate_product`: アフィリエイト商品情報（収益記事の場合）
 - `competitor_analysis_result`: 競合分析結果（/competitor-analysisの出力）
@@ -136,8 +137,20 @@ Markdown形式の完成記事
 2. **中盤**: 詳細情報 → 比較表・ランキング
 3. **終盤**: CTA (Call to Action)
 
+#### Blogger版（シンプルHTML）
 ```html
-<!-- CTAボタン例 -->
+<!-- CTAボタン例（Blogger） -->
+<p style="text-align:center; padding:20px; background:#f9f9f9; border-radius:8px; margin:30px 0;">
+  <strong style="display:block; margin-bottom:10px; color:#333;">今すぐ公式サイトで詳細をチェック！</strong>
+  <a href="[アフィリエイトリンク]" target="_blank" rel="nofollow" style="display:inline-block; padding:12px 30px; background:#0066cc; color:#fff; text-decoration:none; border-radius:5px; font-weight:bold;">
+    公式サイトはこちら
+  </a>
+</p>
+```
+
+#### WordPress版（カスタムCSS利用可）
+```html
+<!-- CTAボタン例（WordPress） -->
 <div class="cta-box">
   <p class="cta-text">今すぐ公式サイトで詳細をチェック！</p>
   <a href="[アフィリエイトリンク]" class="cta-button" target="_blank" rel="nofollow">
@@ -161,6 +174,63 @@ Markdown形式の完成記事
 - [ ] オリジナル性がある (コピペではない)
 
 ## 出力形式
+
+### Blogger版（デフォルト）
+
+```markdown
+<!-- Blogger投稿画面に貼り付け用 -->
+
+<!-- メタ情報（手動設定）
+タイトル: [記事タイトル（30-40文字）]
+説明: [メタディスクリプション（120文字以内）]
+ラベル: [ラベル1], [ラベル2], [ラベル3]
+パーマリンク: [keyword-based-url]
+-->
+
+# [H1タイトル]
+
+[導入文 (200-300文字)]
+- 読者の悩み・疑問に共感
+- この記事で得られること
+- 結論の先出し
+
+![アイキャッチ画像](image-url)
+
+## 目次
+1. [リンク1](#section1)
+2. [リンク2](#section2)
+...
+
+<h2 id="section1">[H2見出し1]</h2>
+
+[本文]
+
+### [H3見出し]
+[本文]
+
+...
+
+## まとめ
+
+[要点の箇条書き]
+- ポイント1
+- ポイント2
+- ポイント3
+
+[最終CTA]
+
+---
+
+### 内部リンク候補
+- [関連記事1のタイトル](url)
+- [関連記事2のタイトル](url)
+
+### 使用した画像
+1. [画像説明] - alt: "[キーワード含む説明]"
+2. [画像説明] - alt: "[キーワード含む説明]"
+```
+
+### WordPress版（移行後）
 
 ```markdown
 ---
