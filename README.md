@@ -43,13 +43,20 @@ claude-code-skills-templat-seo/
 ├── QUICKSTART.md                      # 30分クイックスタート
 │
 ├── skills/                            # スキル定義 (機能単位)
-│   ├── affiliate-planning/            # ジャンル選定、競合分析
-│   ├── keyword-research/              # キーワードリサーチ
-│   ├── site-architecture/             # サイト構造設計
-│   ├── content-calendar/              # コンテンツカレンダー
-│   ├── seo-article-generator/         # SEO記事作成
-│   ├── seo-audit/                     # SEO監査
-│   └── conversion-optimizer/          # CVR最適化
+│   ├── affiliate-planning/
+│   │   └── skill.md                   # ジャンル選定、競合分析
+│   ├── keyword-research/
+│   │   └── skill.md                   # キーワードリサーチ
+│   ├── site-architecture/
+│   │   └── skill.md                   # サイト構造設計
+│   ├── content-calendar/
+│   │   └── skill.md                   # コンテンツカレンダー
+│   ├── seo-article-generator/
+│   │   └── skill.md                   # SEO記事作成
+│   ├── seo-audit/
+│   │   └── skill.md                   # SEO監査
+│   └── conversion-optimizer/
+│       └── skill.md                   # CVR最適化
 │
 ├── templates/                         # テンプレート
 │   └── article-template.md            # 記事テンプレート
