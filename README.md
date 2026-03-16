@@ -88,11 +88,17 @@ claude-code-skills-templat-seo/
 # 2. キーワードリサーチ
 /keyword-research
 
-# 3. サイト構造設計
+# 3. 競合分析 (記事作成前に必須)
+/competitor-analysis
+
+# 4. サイト構造設計
 /site-architecture
 
-# 4. 初回記事作成
+# 5. 初回記事作成
 /seo-article-generator
+
+# 6. 内部リンク最適化 (記事10本以上たまってから)
+/internal-linking
 ```
 
 ### 既存サイトを改善する場合
@@ -100,7 +106,13 @@ claude-code-skills-templat-seo/
 # 1. SEO監査
 /seo-audit
 
-# 2. コンバージョン最適化
+# 2. 競合分析 (リライト前に)
+/competitor-analysis
+
+# 3. 内部リンク最適化
+/internal-linking
+
+# 4. コンバージョン最適化
 /conversion-optimizer
 ```
 

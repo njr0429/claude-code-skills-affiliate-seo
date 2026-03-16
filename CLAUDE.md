@@ -6,22 +6,55 @@
 
 ## 📋 利用可能なスキル一覧 (9個)
 
-### 1. 企画・戦略フェーズ
+### 1. 企画・戦略フェーズ (Week 1-2)
 - `/affiliate-planning` - ジャンル選定、競合分析、収益戦略
 - `/keyword-research` - キーワード調査、検索ボリューム分析
-- `/competitor-analysis` - 上位10記事分析、見出し抽出、差別化発見
 
-### 2. 設計フェーズ
+### 2. 設計フェーズ (Week 2-3)
 - `/site-architecture` - サイト構造設計、カテゴリー設計
 - `/content-calendar` - コンテンツカレンダー作成
 
-### 3. 開発・構築フェーズ
+### 3. 開発・構築フェーズ (Week 3-8)
+- `/competitor-analysis` - 上位10記事分析、見出し抽出、差別化発見 (記事作成前に毎回実行)
 - `/seo-article-generator` - SEO最適化記事の作成
-- `/internal-linking` - 内部リンク最適化、クラスター構造、回遊率向上
+- `/internal-linking` - 内部リンク最適化、クラスター構造 (記事10本以上で実行)
 
-### 4. 最適化フェーズ
+### 4. 最適化フェーズ (Week 8-)
 - `/seo-audit` - SEO監査・改善提案
 - `/conversion-optimizer` - CVR改善施策
+
+---
+
+## 🔄 推奨ワークフロー
+
+### 新規サイト立ち上げ
+```
+1. /affiliate-planning → ジャンル決定
+2. /keyword-research → キーワードリスト作成
+3. /site-architecture → サイト構造設計
+4. /content-calendar → 投稿スケジュール
+
+【記事作成ループ (30-50記事)】
+5. /competitor-analysis → 競合分析
+6. /seo-article-generator → 記事作成
+   ↓
+   繰り返し
+   ↓
+7. /internal-linking → 記事10本超えたら実行
+
+【定期メンテナンス】
+8. /seo-audit → 月1回
+9. /conversion-optimizer → 収益記事のCVR改善
+```
+
+### 既存サイト改善
+```
+1. /seo-audit → 現状診断
+2. /competitor-analysis → 競合との差を確認
+3. /internal-linking → リンク構造最適化
+4. /conversion-optimizer → CVR改善
+5. /seo-article-generator → リライト実施
+```
 
 ---
 

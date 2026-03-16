@@ -245,15 +245,18 @@ SEO:
 ### サイトはあるが記事がない人
 ```bash
 1. /keyword-research でキーワード調査
-2. /seo-article-generator で初記事作成
-3. 明日も1記事書く
+2. /competitor-analysis で競合分析
+3. /seo-article-generator で初記事作成
+4. 明日も1記事書く
 ```
 
 ### 記事はあるが収益が出ない人
 ```bash
 1. /seo-audit でサイト診断
-2. /conversion-optimizer でCVR改善
-3. リライト開始
+2. /competitor-analysis で競合分析
+3. /internal-linking で内部リンク最適化
+4. /conversion-optimizer でCVR改善
+5. リライト開始
 ```
 
 ---
@@ -265,17 +268,21 @@ SEO:
 新規サイト:
 1. /affiliate-planning
 2. /keyword-research
-3. /site-architecture
-4. /content-calendar
-5. /seo-article-generator (繰り返し)
-6. /seo-audit (3ヶ月後)
-7. /conversion-optimizer (4ヶ月後)
+3. /competitor-analysis (記事作成前に)
+4. /site-architecture
+5. /content-calendar
+6. /seo-article-generator (繰り返し)
+7. /internal-linking (記事10本以上で)
+8. /seo-audit (3ヶ月後)
+9. /conversion-optimizer (4ヶ月後)
 
 既存サイト改善:
 1. /seo-audit
-2. /keyword-research
-3. /conversion-optimizer
-4. /seo-article-generator (リライト)
+2. /competitor-analysis
+3. /internal-linking
+4. /keyword-research
+5. /conversion-optimizer
+6. /seo-article-generator (リライト)
 ```
 
 ### おすすめ学習リソース
