@@ -12,7 +12,6 @@
 - `target_period`: 計画期間（デフォルト: 6ヶ月）
 
 ### オプション
-- `platform`: プラットフォーム（`blogger` / `wordpress`、デフォルト: `blogger`）
 - `weekly_posts`: 週間投稿数（デフォルト: 2記事/週）
 - `team_size`: チーム人数（デフォルト: 1人）
 

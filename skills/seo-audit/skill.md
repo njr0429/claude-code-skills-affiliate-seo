@@ -11,6 +11,7 @@
 - `site_url`: サイトURL
 
 ### オプション
+- `platform`: プラットフォーム（`blogger` / `wordpress`、デフォルト: `blogger`）
 - `audit_scope`: 監査範囲（`full` = 全体 / `technical` = テクニカルSEOのみ / `content` = コンテンツのみ / デフォルト: `full`）
 - `focus_keywords`: 重点チェックキーワード（リスト）
 
@@ -67,12 +68,18 @@ Markdown形式のSEO監査レポート
 - CLS (Cumulative Layout Shift): 0.1以下
 ```
 
-**改善策**:
-- 画像を WebP/AVIF に変換
-- 画像遅延読み込み (lazy loading)
-- CSS/JS の最小化
-- CDN 導入
-- キャッシュ有効化
+**改善策（Blogger）**:
+- 画像を WebP に変換（Blogger標準機能で対応）
+- 重い外部スクリプト削除（アナリティクスのみ推奨）
+- テーマをシンプルに（公式テーマ推奨）
+- 画像サイズ最適化（アップロード前に圧縮）
+
+**改善策（WordPress）**:
+- 画像最適化プラグイン（EWWW Image Optimizer等）
+- キャッシュプラグイン（WP Super Cache等）
+- CSS/JS 最小化プラグイン
+- CDN 導入（Cloudflare等）
+- lazy loading プラグイン
 
 #### モバイルフレンドリー
 ```
@@ -245,6 +252,53 @@ Sitemap: https://example.com/sitemap.xml
 - 文字数が競合より少ない → 各記事+500-1000文字
 - 被リンクが少ない → 外部獲得施策
 - 記事数が少ない → 月10記事ペース維持
+```
+
+### 7. プラットフォーム別チェック項目
+
+#### Blogger固有のチェック
+```markdown
+✅ テーマ設定
+- 公式テーマまたは軽量テーマ使用
+- モバイル最適化設定ON
+
+✅ ガジェット・ウィジェット
+- 不要なガジェット削除（速度改善）
+- 人気の投稿、ラベル、検索ボックスは有効
+
+✅ 設定確認
+- カスタムドメイン設定（収益化後）
+- HTTPSリダイレクト有効
+- robots.txtカスタム設定
+
+❌ 制限事項
+- プラグイン不可（代替機能で対応）
+- テーマカスタマイズに制限あり
+- URL構造の自由度低い
+```
+
+#### WordPress固有のチェック
+```markdown
+✅ プラグイン監査
+- SEOプラグイン: Yoast SEO または Rank Math
+- 画像最適化: EWWW Image Optimizer
+- キャッシュ: WP Super Cache
+- セキュリティ: Wordfence
+- バックアップ: UpdraftPlus
+
+✅ テーマ確認
+- 軽量テーマ使用（GeneratePress、Astra等）
+- レスポンシブ対応
+- SEO最適化済みテーマ
+
+✅ パーマリンク設定
+- カスタム構造: /%category%/%postname%/
+- 投稿名ベース
+
+⚠️ 注意点
+- プラグイン入れすぎに注意（10個以内推奨）
+- 定期アップデート必須
+- セキュリティ対策必須
 ```
 
 ## 出力形式

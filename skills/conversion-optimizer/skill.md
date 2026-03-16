@@ -98,7 +98,18 @@ Markdown形式のCVR最適化レポート
 <a href="...">詳細を見る</a>
 ```
 
-**✅ 強いCTA（Blogger版：インラインCSS）**
+**✅ シンプルCTA（Blogger初心者向け）**
+```html
+<p style="text-align: center; padding: 15px; background: #f0f8ff; border: 2px solid #0066cc; border-radius: 5px; margin: 20px 0;">
+  <strong>今すぐチェック！</strong><br>
+  <a href="[アフィリエイトリンク]" target="_blank" rel="nofollow" style="display: inline-block; margin-top: 10px; padding: 12px 30px; background: #0066cc; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+    公式サイトで詳細を見る
+  </a><br>
+  <small style="color: #666;">送料無料・30日間返品保証</small>
+</p>
+```
+
+**✅ 装飾CTA（Blogger上級者向け）**
 ```html
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; text-align: center; margin: 30px 0;">
   <p style="color: #fff; font-size: 16px; margin: 0 0 10px 0; font-weight: bold;">今だけ30%オフ!</p>

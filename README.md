@@ -14,7 +14,6 @@
 ```bash
 /affiliate-planning      # ジャンル選定、競合分析、収益戦略
 /keyword-research        # キーワード調査、検索ボリューム分析
-/competitor-analysis     # 上位10記事分析、見出し抽出、差別化発見
 ```
 
 ### Phase 2: 設計 (Week 2-3)
@@ -25,8 +24,9 @@
 
 ### Phase 3: 開発・構築 (Week 3-8)
 ```bash
+/competitor-analysis     # 上位10記事分析（記事作成前に毎回実行）
 /seo-article-generator   # SEO最適化記事の作成
-/internal-linking        # 内部リンク最適化、クラスター構造、回遊率向上
+/internal-linking        # 内部リンク最適化（記事10本以上で実行）
 ```
 
 ### Phase 4: 最適化 (Week 8-)
