@@ -8,12 +8,13 @@
 - 記事数: 30-50記事
 - 想定期間: 6-12ヶ月
 
-## 📋 利用可能なスキル (7個)
+## 📋 利用可能なスキル (9個)
 
 ### Phase 1: 企画・戦略 (Week 1-2)
 ```bash
 /affiliate-planning      # ジャンル選定、競合分析、収益戦略
 /keyword-research        # キーワード調査、検索ボリューム分析
+/competitor-analysis     # 上位10記事分析、見出し抽出、差別化発見
 ```
 
 ### Phase 2: 設計 (Week 2-3)
@@ -25,6 +26,7 @@
 ### Phase 3: 開発・構築 (Week 3-8)
 ```bash
 /seo-article-generator   # SEO最適化記事の作成
+/internal-linking        # 内部リンク最適化、クラスター構造、回遊率向上
 ```
 
 ### Phase 4: 最適化 (Week 8-)
@@ -47,12 +49,16 @@ claude-code-skills-templat-seo/
 │   │   └── skill.md                   # ジャンル選定、競合分析
 │   ├── keyword-research/
 │   │   └── skill.md                   # キーワードリサーチ
+│   ├── competitor-analysis/
+│   │   └── skill.md                   # 競合記事分析、差別化発見
 │   ├── site-architecture/
 │   │   └── skill.md                   # サイト構造設計
 │   ├── content-calendar/
 │   │   └── skill.md                   # コンテンツカレンダー
 │   ├── seo-article-generator/
 │   │   └── skill.md                   # SEO記事作成
+│   ├── internal-linking/
+│   │   └── skill.md                   # 内部リンク最適化
 │   ├── seo-audit/
 │   │   └── skill.md                   # SEO監査
 │   └── conversion-optimizer/
